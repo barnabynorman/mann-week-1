@@ -6,7 +6,7 @@ spec:
   selector:
     app: jx-payments
   ports:
-  - protocole: "TCP"
+  - protocol: "TCP"
     port: 8080
     targetPort: 8080
   type: LoadBalancer
@@ -24,12 +24,11 @@ spec:
   template:
     metadata:
       labels:
-      app: jx-payments
+        app: jx-payments
     spec:
       containers:
       - name: jx-payments
-      image: mmontalvogaete/jx_payments:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 8000
-
+        image: mmontalvogaete/jx_payments:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

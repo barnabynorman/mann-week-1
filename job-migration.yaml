@@ -8,7 +8,7 @@ spec:
       containers:
         - name: django
           image: mmontalvogaete/jx_payments:latest
-          command: ['python', manage.py', 'migrate']
+          command: ['python', 'manage.py', 'migrate']
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
@@ -17,4 +17,3 @@ spec:
                   key: password
       restartPolicy: Never
   backoffLimit: 5
-
